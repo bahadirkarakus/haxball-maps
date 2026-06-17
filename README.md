@@ -43,3 +43,4 @@ L |                                             | L
 A compact arena with corner ramps, tunnel pockets at the top and bottom walls, and high-bounce deflectors (bCoef 2.5) in front of each goal.
 
 **Recommended:** 2v2 to 3v3
+ 

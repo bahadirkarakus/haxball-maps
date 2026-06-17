@@ -1,0 +1,116 @@
+{
+  "name": "Nexus",
+  "width": 1080,
+  "height": 520,
+  "spawnDistance": 220,
+  "kickOffReset": "partial",
+  "canBeStored": true,
+  "bg": {
+    "type": "grass",
+    "width": 1040,
+    "height": 480,
+    "kickOffRadius": 80,
+    "cornerRadius": 0
+  },
+  "traits": {
+    "wall": {
+      "vis": true,
+      "color": "E8E8E8",
+      "bCoef": 0.9,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    },
+    "ramp": {
+      "vis": true,
+      "color": "FFD700",
+      "bCoef": 1.1,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    },
+    "platform": {
+      "vis": true,
+      "color": "00CCFF",
+      "bCoef": 0.9,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    },
+    "guard": {
+      "vis": true,
+      "color": "FF8C00",
+      "bCoef": 1.0,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    }
+  },
+  "vertexes": [
+    {"x": -520, "y": -140},
+    {"x": -420, "y": -240},
+    {"x":  420, "y": -240},
+    {"x":  520, "y": -140},
+    {"x":  520, "y":  -60},
+    {"x":  520, "y":   60},
+    {"x":  520, "y":  140},
+    {"x":  420, "y":  240},
+    {"x": -420, "y":  240},
+    {"x": -520, "y":  140},
+    {"x": -520, "y":   60},
+    {"x": -520, "y":  -60},
+    {"x": -150, "y": -155},
+    {"x":  150, "y": -155},
+    {"x":  150, "y":  -90},
+    {"x": -150, "y":  -90},
+    {"x": -150, "y":   90},
+    {"x":  150, "y":   90},
+    {"x":  150, "y":  155},
+    {"x": -150, "y":  155},
+    {"x": -480, "y":  -95},
+    {"x": -480, "y":   95},
+    {"x":  480, "y":  -95},
+    {"x":  480, "y":   95}
+  ],
+  "segments": [
+    {"v0":  0, "v1": 11, "trait": "wall"},
+    {"v0": 10, "v1":  9, "trait": "wall"},
+    {"v0":  0, "v1":  1, "trait": "ramp"},
+    {"v0":  1, "v1":  2, "trait": "wall"},
+    {"v0":  2, "v1":  3, "trait": "ramp"},
+    {"v0":  3, "v1":  4, "trait": "wall"},
+    {"v0":  5, "v1":  6, "trait": "wall"},
+    {"v0":  6, "v1":  7, "trait": "ramp"},
+    {"v0":  7, "v1":  8, "trait": "wall"},
+    {"v0":  8, "v1":  9, "trait": "ramp"},
+    {"v0": 12, "v1": 13, "trait": "platform"},
+    {"v0": 13, "v1": 14, "trait": "platform"},
+    {"v0": 14, "v1": 15, "trait": "platform"},
+    {"v0": 15, "v1": 12, "trait": "platform"},
+    {"v0": 16, "v1": 17, "trait": "platform"},
+    {"v0": 17, "v1": 18, "trait": "platform"},
+    {"v0": 18, "v1": 19, "trait": "platform"},
+    {"v0": 19, "v1": 16, "trait": "platform"},
+    {"v0": 20, "v1": 11, "trait": "guard"},
+    {"v0": 21, "v1": 10, "trait": "guard"},
+    {"v0": 22, "v1":  4, "trait": "guard"},
+    {"v0": 23, "v1":  5, "trait": "guard"}
+  ],
+  "goals": [
+    {"p0": [-520, -60], "p1": [-520,  60], "team": "red"},
+    {"p0": [ 520,  60], "p1": [ 520, -60], "team": "blue"}
+  ],
+  "discs": [],
+  "playerPhysics": {
+    "bCoef": 0,
+    "invMass": 0.5,
+    "damping": 0.96,
+    "acceleration": 0.11,
+    "kickingAcceleration": 0.083,
+    "kickingDamping": 0.96,
+    "kickStrength": 5
+  },
+  "ballPhysics": {
+    "radius": 6,
+    "bCoef": 0.5,
+    "invMass": 1.0,
+    "damping": 0.99,
+    "color": "FFFFFF"
+  }
+}

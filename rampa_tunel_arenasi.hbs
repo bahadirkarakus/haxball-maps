@@ -1,0 +1,120 @@
+{
+  "name": "Rampa & Tünel Arenası",
+  "width": 870,
+  "height": 460,
+  "spawnDistance": 200,
+  "kickOffReset": "partial",
+  "canBeStored": true,
+  "bg": {
+    "type": "grass",
+    "width": 840,
+    "height": 420,
+    "kickOffRadius": 75,
+    "cornerRadius": 0
+  },
+  "traits": {
+    "wall": {
+      "vis": true,
+      "color": "FFFFFF",
+      "bCoef": 1.0,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    },
+    "ramp": {
+      "vis": true,
+      "color": "FFCC00",
+      "bCoef": 1.1,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    },
+    "tunnel": {
+      "vis": true,
+      "color": "44AAFF",
+      "bCoef": 1.0,
+      "cMask": ["ball", "red", "blue"],
+      "cGroup": ["wall"]
+    },
+    "bounce": {
+      "vis": true,
+      "color": "FF4444",
+      "bCoef": 2.5,
+      "cMask": ["ball"],
+      "cGroup": ["wall"]
+    }
+  },
+  "vertexes": [
+    {"x": -420, "y": -130},
+    {"x": -340, "y": -210},
+    {"x": -420, "y": -55},
+    {"x": -420, "y":  55},
+    {"x": -420, "y":  130},
+    {"x": -340, "y":  210},
+    {"x":  -80, "y": -210},
+    {"x":   80, "y": -210},
+    {"x":  340, "y": -210},
+    {"x":  420, "y": -130},
+    {"x":  420, "y":  -55},
+    {"x":  420, "y":   55},
+    {"x":  420, "y":  130},
+    {"x":  340, "y":  210},
+    {"x":   80, "y":  210},
+    {"x":  -80, "y":  210},
+    {"x":  -80, "y": -120},
+    {"x":   80, "y": -120},
+    {"x":  -80, "y":  120},
+    {"x":   80, "y":  120},
+    {"x": -350, "y":  -80},
+    {"x": -400, "y":  -35},
+    {"x": -350, "y":   80},
+    {"x": -400, "y":   35},
+    {"x":  350, "y":  -80},
+    {"x":  400, "y":  -35},
+    {"x":  350, "y":   80},
+    {"x":  400, "y":   35}
+  ],
+  "segments": [
+    {"v0":  0, "v1":  2, "trait": "wall"},
+    {"v0":  3, "v1":  4, "trait": "wall"},
+    {"v0":  1, "v1":  6, "trait": "wall"},
+    {"v0":  7, "v1":  8, "trait": "wall"},
+    {"v0":  9, "v1": 10, "trait": "wall"},
+    {"v0": 11, "v1": 12, "trait": "wall"},
+    {"v0": 13, "v1": 14, "trait": "wall"},
+    {"v0": 15, "v1":  5, "trait": "wall"},
+    {"v0":  0, "v1":  1, "trait": "ramp"},
+    {"v0":  8, "v1":  9, "trait": "ramp"},
+    {"v0":  4, "v1":  5, "trait": "ramp"},
+    {"v0": 12, "v1": 13, "trait": "ramp"},
+    {"v0":  6, "v1": 16, "trait": "tunnel"},
+    {"v0":  7, "v1": 17, "trait": "tunnel"},
+    {"v0": 16, "v1": 17, "trait": "tunnel"},
+    {"v0": 15, "v1": 18, "trait": "tunnel"},
+    {"v0": 14, "v1": 19, "trait": "tunnel"},
+    {"v0": 18, "v1": 19, "trait": "tunnel"},
+    {"v0": 20, "v1": 21, "trait": "bounce"},
+    {"v0": 22, "v1": 23, "trait": "bounce"},
+    {"v0": 24, "v1": 25, "trait": "bounce"},
+    {"v0": 26, "v1": 27, "trait": "bounce"}
+  ],
+  "goals": [
+    {"p0": [-420, -55], "p1": [-420,  55], "team": "red"},
+    {"p0": [ 420,  55], "p1": [ 420, -55], "team": "blue"}
+  ],
+  "discs": [],
+  "playerPhysics": {
+    "bCoef": 0,
+    "invMass": 0.5,
+    "damping": 0.96,
+    "acceleration": 0.11,
+    "kickingAcceleration": 0.083,
+    "kickingDamping": 0.96,
+    "kickStrength": 5
+  },
+  "ballPhysics": {
+    "radius": 6,
+    "bCoef": 0.5,
+    "invMass": 1.0,
+    "damping": 0.99,
+    "color": "FFFFFF"
+  }
+}
